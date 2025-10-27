@@ -77,7 +77,7 @@ vvp pipeline_sim
 This project’s design and pipeline architecture are based on:
 
 > **Digital Design and Computer Architecture (RISC-V Edition)**  
-> _David Harris and Sarah Harris_
+> **David Harris and Sarah Harris**
 > _CS322M - Digital Design And Computer Architecture_
 
 ---
