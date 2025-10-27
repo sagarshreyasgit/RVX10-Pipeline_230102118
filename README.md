@@ -78,7 +78,7 @@ This project’s design and pipeline architecture are based on:
 
 > **Digital Design and Computer Architecture (RISC-V Edition)**  
 > **David Harris and Sarah Harris**
-> _CS322M - Digital Design And Computer Architecture_
+> **CS322M - Digital Design And Computer Architecture**
 
 ---
 
