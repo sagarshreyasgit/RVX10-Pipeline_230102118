@@ -44,52 +44,9 @@ Each stage is separated by dedicated **pipeline registers**, while **forwarding*
 
 ## 🧱 Core Block Diagram  
 ![Pipeline Diagram](https://github.com/user-attachments/assets/0296251d-c06e-440d-a48d-3899437b4aa2)
-
 ---
-
-## 📂 Repository Structure
-├── src/
-│   ├── riscvpipeline.sv      # Top-level core
-│   ├── datapath.sv           # Pipelined datapath
-│   ├── controller.sv         # Main controller
-│   ├── forwarding_unit.sv    # Handles data hazards
-│   ├── hazard_unit.sv        # Detects hazards
-│   ├── alusv.sv              # ALU (User's 'alu.sv')
-│   ├── regfile.sv            # Register File
-│   ├── imem.sv               # Instruction Memory
-│   ├── dmem.sv               # Data Memory
-│   ├── pipe_IF_ID.sv         # Pipeline Register IF/ID
-│   ├── pipe_ID_EX.sv         # Pipeline Register ID/EX
-│   ├── pipe_EX_MEM.sv        # Pipeline Register EX/MEM
-│   ├── pipe_MEM_WB.sv        # Pipeline Register MEM/WB
-│   ├── ctrl_ID_EX.sv         # Control pipeline register
-│   ├── ctrl_EX_MEM.sv        # Control pipeline register
-│   ├── ctrl_MEM_WB.sv        # Control pipeline register
-│   ├── aludec.sv             # ALU Decoder
-│   ├── maindec.sv            # Main Decoder
-│   ├── adder.sv
-│   ├── extend.sv
-│   ├── mux2.sv
-│   ├── mux3.sv
-│   ├── flop.sv
-│   └── top.sv
-│
-├── tb/
-│   ├── testbench.sv          # Testbench (User's 'tb_pipeline.sv')
-│   ├── rvx10_pipeline.hex    # Test program (memory image)
-│   └── riscvtest.mem         # Memory initialization file
-│
-└── docs/
-    ├── TESTPLAN.md           # Documentation (similar to REPORT.md)
-    ├── encoding.md           # Documentation
-    └── waveforms/
-        ├── Bonus_Performance-Execution_results.png
-        ├── Dmem_store_25.png
-        ├── Final_CPI.png
-        ├── Register_file_1.png
-        ├── Register_file_2.png
-        ├── Simulation_succeded.png
-        └── Value_25_at_address_100.png
+## Core Logic Diagram
+![dsd](https://github-production-user-asset-6210df.s3.amazonaws.com/180000107/504925170-0296251d-c06e-440d-a48d-3899437b4aa2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251027T141018Z&X-Amz-Expires=300&X-Amz-Signature=c450283c5753383adadbb729474026206212b45b923bf184a5b76bfd71f64d93&X-Amz-SignedHeaders=host)
 ## 🧪 How to Run  
 
 ### 🖥️ Option 1: Using Vivado  
@@ -117,15 +74,16 @@ vvp pipeline_sim
 - Pipeline Overlap: Multiple instructions active each cycle (verified via waveforms).
 ---
 ## 📚 References
-Digital Design and Computer Architecture (RISC-V Edition)
-David Harris & Sarah Harris
+This project’s design and pipeline architecture are based on: 
+> *Digital Design and Computer Architecture (RISC-V Edition)*
+> *David Harris and Sarah Harris*
+> *CS322M - Digital Design And Computer Architecture*
 
 IIT Guwahati – CS322M: Digital Logic and Computer Architecture
-Dr. Satyajit Das, Assistant Professor
 ---
 ## 🏫 Acknowledgment
-Developed under the guidance of
-Dr. Satyajit Das
-Assistant Professor
-Department of Computer Science and Engineering
-Indian Institute of Technology, Guwahati
+Developed under the guidance of 
+**Dr. Satyajit Das** 
+*Assistant Professor* 
+Department of **Computer Science and Engineering** 
+**Indian Institute of Technology, Guwahati**
