@@ -88,7 +88,8 @@ The test program is assembled manually with corresponding **machine codes** and 
 
 ## Screenshots
 
-![Risc test reg file screenshot](https://github.com/user-attachments/assets/2890c3d8-06ea-410c-abf9-39f7d5f3c313)
+![Risc test reg file screenshot1](https://github.com/sagarshreyasgit/RVX10-Pipeline_230102118/blob/main/Testbench%20and%20Simulation%20Result/Register_file_1.png)
+![Risc test reg file screenshot2](https://github.com/sagarshreyasgit/RVX10-Pipeline_230102118/blob/main/Testbench%20and%20Simulation%20Result/Register_file_2.png)
 
 ![Sample of Sarah Harris ref book Digital design and computer architecture](https://github.com/user-attachments/assets/87863e0f-9cb3-4b95-a4ff-1014210ddfe1)
 
@@ -100,3 +101,4 @@ The test program is assembled manually with corresponding **machine codes** and 
 - ABS(INT_MIN) returns 0x80000000.
 - x0 writes are ignored.
 - Final store writes 25 to address 100.
+
