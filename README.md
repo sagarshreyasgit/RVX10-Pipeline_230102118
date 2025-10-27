@@ -45,8 +45,6 @@ Each stage is separated by dedicated **pipeline registers**, while **forwarding*
 ## 🧱 Core Block Diagram  
 ![Pipeline Diagram](https://github.com/user-attachments/assets/0296251d-c06e-440d-a48d-3899437b4aa2)
 ---
-## Core Logic Diagram
-![dsd](https://github-production-user-asset-6210df.s3.amazonaws.com/180000107/504925170-0296251d-c06e-440d-a48d-3899437b4aa2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251027T141018Z&X-Amz-Expires=300&X-Amz-Signature=c450283c5753383adadbb729474026206212b45b923bf184a5b76bfd71f64d93&X-Amz-SignedHeaders=host)
 ## 🧪 How to Run  
 
 ### 🖥️ Option 1: Using Vivado  
@@ -73,17 +71,20 @@ vvp pipeline_sim
 - Branch Flush: IF/ID and ID/EX registers flushed on taken branch.
 - Pipeline Overlap: Multiple instructions active each cycle (verified via waveforms).
 ---
-## 📚 References
-This project’s design and pipeline architecture are based on: 
-> *Digital Design and Computer Architecture (RISC-V Edition)*
-> *David Harris and Sarah Harris*
-> *CS322M - Digital Design And Computer Architecture*
 
-IIT Guwahati – CS322M: Digital Logic and Computer Architecture
+## 📚 References
+
+This project’s design and pipeline architecture are based on:
+
+> **Digital Design and Computer Architecture (RISC-V Edition)**  
+> _David Harris and Sarah Harris_ > _CS322M - Digital Design And Computer Architecture_
+
 ---
+
 ## 🏫 Acknowledgment
-Developed under the guidance of 
-**Dr. Satyajit Das** 
-*Assistant Professor* 
-Department of **Computer Science and Engineering** 
+
+Developed under the guidance of  
+**Dr. Satyajit Das**  
+_Assistant Professor_  
+Department of **Computer Science and Engineering**  
 **Indian Institute of Technology, Guwahati**
