@@ -48,29 +48,48 @@ Each stage is separated by dedicated **pipeline registers**, while **forwarding*
 ---
 
 ## 📂 Repository Structure
-RVX10P_<rollno>/
 ├── src/
-│ ├── riscvpipeline.sv # Top-level processor core
-│ ├── datapath.sv # Pipelined datapath (IF–WB)
-│ ├── controller.sv # Control logic with main & ALU decoders
-│ ├── forwarding_unit.sv # Data hazard resolution
-│ ├── hazard_unit.sv # Stall & flush generation
-│ ├── alu.sv, regfile.sv, imem.sv, dmem.sv
-│ └── pipeline_reg_modules.sv # All stage register definitions
+│   ├── riscvpipeline.sv      # Top-level core
+│   ├── datapath.sv           # Pipelined datapath
+│   ├── controller.sv         # Main controller
+│   ├── forwarding_unit.sv    # Handles data hazards
+│   ├── hazard_unit.sv        # Detects hazards
+│   ├── alusv.sv              # ALU (User's 'alu.sv')
+│   ├── regfile.sv            # Register File
+│   ├── imem.sv               # Instruction Memory
+│   ├── dmem.sv               # Data Memory
+│   ├── pipe_IF_ID.sv         # Pipeline Register IF/ID
+│   ├── pipe_ID_EX.sv         # Pipeline Register ID/EX
+│   ├── pipe_EX_MEM.sv        # Pipeline Register EX/MEM
+│   ├── pipe_MEM_WB.sv        # Pipeline Register MEM/WB
+│   ├── ctrl_ID_EX.sv         # Control pipeline register
+│   ├── ctrl_EX_MEM.sv        # Control pipeline register
+│   ├── ctrl_MEM_WB.sv        # Control pipeline register
+│   ├── aludec.sv             # ALU Decoder
+│   ├── maindec.sv            # Main Decoder
+│   ├── adder.sv
+│   ├── extend.sv
+│   ├── mux2.sv
+│   ├── mux3.sv
+│   ├── flop.sv
+│   └── top.sv
 │
 ├── tb/
-│ ├── tb_pipeline.sv # Testbench for simulation
-│ ├── rvx10_pipeline.hex # Test program (memory file)
-│ └── riscvtest.mem # Memory initialization
+│   ├── testbench.sv          # Testbench (User's 'tb_pipeline.sv')
+│   ├── rvx10_pipeline.hex    # Test program (memory image)
+│   └── riscvtest.mem         # Memory initialization file
 │
 └── docs/
-├── REPORT.md # Design explanation & waveform analysis
-└── waveforms/ # GTKWave screenshots
-
-
----
-## Core Logic Diagram
-![dsd](https://github-production-user-asset-6210df.s3.amazonaws.com/180000107/504925170-0296251d-c06e-440d-a48d-3899437b4aa2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251027T141018Z&X-Amz-Expires=300&X-Amz-Signature=c450283c5753383adadbb729474026206212b45b923bf184a5b76bfd71f64d93&X-Amz-SignedHeaders=host)
+    ├── TESTPLAN.md           # Documentation (similar to REPORT.md)
+    ├── encoding.md           # Documentation
+    └── waveforms/
+        ├── Bonus_Performance-Execution_results.png
+        ├── Dmem_store_25.png
+        ├── Final_CPI.png
+        ├── Register_file_1.png
+        ├── Register_file_2.png
+        ├── Simulation_succeded.png
+        └── Value_25_at_address_100.png
 ## 🧪 How to Run  
 
 ### 🖥️ Option 1: Using Vivado  
